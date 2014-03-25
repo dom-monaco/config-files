@@ -1,0 +1,56 @@
+# ~/$ subl ~/.bash_profile to configure your files
+
+#shows date at startup
+date
+
+#sets default editor to sublime
+export EDITOR='subl -w'
+export VISUAL='subl -w'
+
+# my bin
+PATH=~/bin
+
+# rbenv
+PATH+=:~/.rbenv/bin
+
+# postgres
+export PGHOME=/Applications/Postgres93.app/Contents/MacOS
+PATH+=:$PGHOME/bin
+
+# heroku
+PATH+=:/usr/local/heroku/bin
+
+# homebrew
+PATH+=:/usr/local/bin
+
+# unix
+PATH+=:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+export PATH
+
+# pretty colors
+export LESS='-R'
+
+GREEN="\[\033[0;32m\]"
+OFF="\[\033[0m\]"
+export PS1="$GREEN\w\$ $OFF"
+
+# Load rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# This will set the title of the iTerm tab to the name of the current directory
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+# Git Shortcuts
+alias gs='git status '
+alias gcom='git checkout master'
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias got='git '
+alias get='git '
