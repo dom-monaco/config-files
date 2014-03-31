@@ -1,12 +1,6 @@
-Course Materials for [Back-End Web Development](http://betamore.com/academy/back-end-web-development)
-
 # Things to install
 
 ## Mac OS X Mavericks
-
-On your Mac, click on the Apple icon in the top left (also called the Apple menu), and choose **About this Mac**. 
-If the version is **10.9.0** or higher, you are running the latest version of OS X. If not, launch the Mac App Store 
-(either from the icon in the doc or from the Apple menu), search for Mavericks and install. It is a free upgrade.
 
 ## Command-Line Tools
 
@@ -151,3 +145,5 @@ running the following command:
 
     gem install rails
 
+
+## Alfred
