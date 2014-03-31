@@ -135,13 +135,8 @@ Put the following one line into that file:
 
     gem: --no-rdoc --no-ri
 
-This will prevent rdoc and ri from being created for each gem that is installed, which isn't needed and 
-significantly slows down the process of installing gems.
 
 ## Rails
-
-Now that we have everything in place, installing Rails is as simple as installing the gem, which you can do by 
-running the following command:
 
     gem install rails
 
