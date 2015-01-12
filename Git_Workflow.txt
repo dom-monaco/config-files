@@ -1,0 +1,58 @@
+﻿Step-by-step Guide for Git Workflow
+Always work on a branch, never work directly to master
+Always rebase before merging
+
+Pulling Latest Version of Origin
+This is the first step before working on a task and creating a new working branch.
+	$ git checkout master
+	$ git pull
+
+Creating a Working Branch
+This creates a branch and immediately set HEAD onto the working branch.
+	$ git checkout -b new_branch_name
+
+Committing Changes
+When files have been modified, removed or added locally, git needs to be informed, and changes needs to be committed before and pushing.
+Adding and Removing Files to the Staging Area
+This step is necessary before any commits.
+	$ git add modified_file1 modified_file2 new_file1 new_file2
+	$ git remove deleted_file1 deleted_file2
+All modified and new files can be added with a single command.
+	$ git add .
+It is often a good idea to check which files have been added or removed from staging but running:
+	$ git status
+Committing Changes
+Commits are done after any changing has been recorded into the staging area (adding or removing files). This step requires a commit message which will appear into the git log.
+	$ git commit -m "commit message"
+
+Publishing Branch for Review
+This step will publish the branch onto origin. This is necessary for the code review process.
+	$ git push --set-upstream origin working_branch
+
+Merging Working Branch onto Master
+When work is fully completed on the branch and ready for merging, this step explains the expected flow to obtain a single commit name into master flow.
+
+Making Sure Local Master is Up-to-date
+	$ git checkout master
+	$ git pull
+
+Rebasing the Working Branch
+	$ git checkout working_branch
+	$ git rebase master
+Problems might occurs at that point if the changes have been done on master will developing on the working branch.
+If this happens, git will set HEAD into an orphan branch, highlight the files that have issues and need to be fixes before completing the merge.
+To see the conflicting files, use:
+	$ git status
+
+Merging the Working Branch onto Master
+	$ git checkout master
+	$ git merge working_branch_name master
+
+Publishing Local Master to Origin
+	$ git push
+
+Clean Up
+After the working branch has been fully merged, the local and remote branches need to be deleted.
+	$ git branch -D working_branch
+	$ git push origin :working_branch
+The : (colon) character before the name of the working branch triggers the removal part of remote branch.
