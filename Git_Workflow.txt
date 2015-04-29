@@ -26,7 +26,7 @@ To see the conflicting files, use:
 	$ git status
 
 	$ git checkout master
-	$ git merge working_branch_name master
+	$ git merge new_branch_name master
 
 	$ git push
 
