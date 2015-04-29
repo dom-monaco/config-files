@@ -13,7 +13,7 @@ Committing Changes
 	$ git commit -m "commit message"
 
 Publishing Branch for Review
-	$ git push --set-upstream origin working_branch
+	$ git push --set-upstream origin new_branch_name
 
 Merging Working Branch onto Master
 	$ git checkout master
