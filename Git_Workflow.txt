@@ -20,11 +20,11 @@ Merging Working Branch onto Master
 	$ git pull
 	$ git checkout working_branch
 	$ git rebase master
-Problems might occurs at that point if the changes have been done on master will developing on the working branch.
+Problems might occurs at that point if changes have been done on master while developing on the local branch.
 If this happens, git will set HEAD into an orphan branch, highlight the files that have issues and need to be fixes before completing the merge.
 To see the conflicting files, use:
 	$ git status
-
+If no merge-conflicts or after fixing conflicts
 	$ git checkout master
 	$ git merge new_branch_name master
 
