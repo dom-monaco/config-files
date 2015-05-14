@@ -1,22 +1,22 @@
 Step-by-step Guide for Git Workflow
 
-Pulling Latest Version of Origin
+Pulling Latest Version of Origin:
 	$ git checkout master
 	$ git pull
 
-Creating a Working Branch
+Creating a Working Branch:
 	$ git checkout -b new_branch_name
 
-Committing Changes
+Committing Changes:
 	$ git status
 	$ git add -A
 	$ git commit -m "commit message"
 
-Publishing Branch for Review
+Publishing Branch for Review:
 	$ git push --set-upstream origin new_branch_name
-open link in terminal output and create pull request
+-open link in terminal output and create pull request
 
-Merging Working Branch onto Master
+Merging Working Branch onto Master:
 	$ git checkout master
 	$ git pull
 	$ git checkout working_branch
@@ -25,12 +25,13 @@ Problems might occurs at that point if changes have been done on master while de
 If this happens, git will set HEAD into an orphan branch, highlight the files that have issues and need to be fixes before completing the merge.
 To see the conflicting files, use:
 	$ git status
-If no merge-conflicts or after fixing conflicts
+	
+If no merge-conflicts or after fixing conflicts:
 	$ git checkout master
 	$ git merge new_branch_name master
 
 	$ git push
 
-Clean Up
+Clean Up:
 	$ git branch -D working_branch
 	$ git push origin :working_branch
