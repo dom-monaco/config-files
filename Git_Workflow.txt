@@ -15,6 +15,7 @@ Committing Changes:
 Publishing Branch for Review:
 	$ git push --set-upstream origin new_branch_name
 -open link in terminal output and create pull request
+-after code review changes are done redo above command without creating a new pull request
 
 Merging Working Branch onto Master:
 	$ git checkout master
