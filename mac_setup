@@ -58,7 +58,7 @@ If you have RVM installed, unless you need it specifically for some other reason
 (http://rvm.io/support/faq#where-is-everything-installed-to-) with:
     rm -rf ~/.rvm
 
-To use rbenv, replace the contents of your `~/.bash_profile` to look like this:
+To use rbenv, replace the contents of your `~/.bash_profile` to look like this, or copy my bash data file in this repo:
 
 ```bash
 export EDITOR='subl -w'
