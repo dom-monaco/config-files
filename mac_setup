@@ -1,6 +1,7 @@
 # Things to install
 
 ## Mac OS X Mavericks
+## Feb 2014 - check for updated versions for future builds
 
 ## Command-Line Tools
 
@@ -52,9 +53,9 @@ Doing it this way will verify that these directories actually exist on your comp
 
 [rbenv](https://github.com/sstephenson/rbenv), *arr-bee-env*, is a ruby installer similar to, but in my opinion 
 [better than RVM](https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F), so you should use rbenv for this class. 
+
 If you have RVM installed, unless you need it specifically for some other reason, I recommend [uninstalling it]
 (http://rvm.io/support/faq#where-is-everything-installed-to-) with:
-
     rm -rf ~/.rvm
 
 To use rbenv, replace the contents of your `~/.bash_profile` to look like this:
@@ -100,7 +101,7 @@ Now you can install `rbenv` by running these commands
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
     git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
-## Ruby 2.1
+## Ruby 2.1 (check for latest version)
 
 With rbenv properly installed, you just need to run this command to install Ruby 2.1:
 
@@ -142,3 +143,5 @@ Put the following one line into that file:
 
 
 ## Alfred
+
+http://www.alfredapp.com/
