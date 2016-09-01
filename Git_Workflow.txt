@@ -7,32 +7,17 @@ Pulling Latest Version of Origin:
 Creating a Working Branch:
 	$ git checkout -b new_branch_name
 
-Committing Changes:
-	$ git status
-	$ git add -A
-	$ git commit -m "commit message"
-
-Publishing Branch for Review:
-	$ git push --set-upstream origin new_branch_name
--open link in terminal output and create pull request
--after code review changes are done redo above command without creating a new pull request
-
-Merging Working Branch onto Master:
-	$ git checkout master
-	$ git pull
-	$ git checkout working_branch
-	$ git rebase master
-Problems might occurs at that point if changes have been done on master while developing on the local branch.
-If this happens, git will set HEAD into an orphan branch, highlight the files that have issues and need to be fixes before completing the merge.
-To see the conflicting files, use:
-	$ git status
+Commit changes locally:
+	$ git add .
+	$ git commit -m "commit msg"
 	
-If no merge-conflicts or after fixing conflicts:
-	$ git checkout master
-	$ git merge new_branch_name master
-
-	$ git push
+Push changes to remote:
+	$ git push --set-upstream origin branch_name
+	
+Update from master:
+	$ git pull origin master
+	go to merge requests in gitlab and create merge request
 
 Clean Up:
 	$ git branch -D working_branch
-	$ git push origin :working_branch
+	
